@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TP5400
+D LiPo Charger with 5V Boost Converter
+K PMIC Battery Charger
+$ENDCMP
+#
+#End Doc Library
