@@ -24,6 +24,31 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Generic_Conn_01x05
+#
+DEF Connector_Generic_Conn_01x05 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x05" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -250 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_TestPoint
 #
 DEF Connector_TestPoint TP 0 30 N N 1 F N
@@ -374,11 +399,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# bcl4v3-rescue_OSHW-LOGOM-SparkFun-Aesthetics
+# bcl4v3-rescue_OSHW-LOGOM-SparkFun-Aesthetics-bcl4v3-rescue-bcl4v3-rescue
 #
-DEF ~bcl4v3-rescue_OSHW-LOGOM-SparkFun-Aesthetics LOGO 0 40 N N 1 L N
+DEF ~bcl4v3-rescue_OSHW-LOGOM-SparkFun-Aesthetics-bcl4v3-rescue-bcl4v3-rescue LOGO 0 40 N N 1 L N
 F0 "LOGO" 0 250 45 H I C CNN
-F1 "bcl4v3-rescue_OSHW-LOGOM-SparkFun-Aesthetics" 0 -400 45 H I C CNN
+F1 "bcl4v3-rescue_OSHW-LOGOM-SparkFun-Aesthetics-bcl4v3-rescue-bcl4v3-rescue" 0 -400 45 H I C CNN
 F2 "OSHW-LOGO-M" 0 300 20 H I C CNN
 F3 "" 0 0 50 H I C CNN
 F4 "XXX-00000" 0 350 60 H V C CNN
@@ -3987,12 +4012,12 @@ DEF dk_Tactile-Switches_B3U-1000P S 0 40 Y Y 1 F N
 F0 "S" 0 160 60 H V C CNN
 F1 "dk_Tactile-Switches_B3U-1000P" 0 -100 60 H V C CNN
 F2 "digikey-footprints:Switch_Tactile_SMD_B3U-1000P" 200 200 60 H I L CNN
-F3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 200 300 60 H I L CNN
+F3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 200 300 60 H I L CNN
 F4 "SW1020CT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
 F5 "B3U-1000P" 200 500 60 H I L CNN "MPN"
 F6 "Switches" 200 600 60 H I L CNN "Category"
 F7 "Tactile Switches" 200 700 60 H I L CNN "Family"
-F8 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F8 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
 F9 "/product-detail/en/omron-electronics-inc-emc-div/B3U-1000P/SW1020CT-ND/1534357" 200 900 60 H I L CNN "DK_Detail_Page"
 F10 "SWITCH TACTILE SPST-NO 0.05A 12V" 200 1000 60 H I L CNN "Description"
 F11 "Omron Electronics Inc-EMC Div" 200 1100 60 H I L CNN "Manufacturer"
@@ -4016,12 +4041,12 @@ DEF dk_USB-DVI-HDMI-Connectors_10118194-0001LF J 0 40 Y Y 1 F N
 F0 "J" -175 600 60 H V C CNN
 F1 "dk_USB-DVI-HDMI-Connectors_10118194-0001LF" -250 -300 60 V V C CNN
 F2 "digikey-footprints:USB_Micro_B_Female_10118194-0001LF" 200 200 60 H I L CNN
-F3 "http://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf" 200 300 60 H I L CNN
+F3 "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf" 200 300 60 H I L CNN
 F4 "609-4618-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"
 F5 "10118194-0001LF" 200 500 60 H I L CNN "MPN"
 F6 "Connectors, Interconnects" 200 600 60 H I L CNN "Category"
 F7 "USB, DVI, HDMI Connectors" 200 700 60 H I L CNN "Family"
-F8 "http://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F8 "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
 F9 "/product-detail/en/amphenol-fci/10118194-0001LF/609-4618-1-ND/2785382" 200 900 60 H I L CNN "DK_Detail_Page"
 F10 "CONN USB MICRO B RECPT SMT R/A" 200 1000 60 H I L CNN "Description"
 F11 "Amphenol FCI" 200 1100 60 H I L CNN "Manufacturer"

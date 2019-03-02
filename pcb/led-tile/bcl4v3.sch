@@ -341,25 +341,14 @@ F 3 "~" H 850 2400 50  0001 C CNN
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J3
-U 1 1 5BE83443
+U 1 1 5BE834A1
 P 2550 1700
 F 0 "J3" H 2630 1692 50  0000 L CNN
-F 1 "Conn_01x04" H 2630 1601 50  0000 L CNN
+F 1 "Conn_01x04" H 2650 1600 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2550 1700 50  0001 C CNN
 F 3 "~" H 2550 1700 50  0001 C CNN
 	1    2550 1700
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J4
-U 1 1 5BE834A1
-P 2550 2400
-F 0 "J4" H 2630 2392 50  0000 L CNN
-F 1 "Conn_01x04" H 2650 2300 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2550 2400 50  0001 C CNN
-F 3 "~" H 2550 2400 50  0001 C CNN
-	1    2550 2400
-	1    0    0    1   
 $EndComp
 Wire Wire Line
 	1050 1600 1200 1600
@@ -942,7 +931,7 @@ L Device:R R4
 U 1 1 5BF12DFF
 P 7350 5950
 F 0 "R4" H 7500 6000 50  0000 C CNN
-F 1 "680R" H 7550 5900 50  0000 C CNN
+F 1 "715R" H 7550 5900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7280 5950 50  0001 C CNN
 F 3 "~" H 7350 5950 50  0001 C CNN
 	1    7350 5950
@@ -1181,8 +1170,6 @@ F 3 "" H 3300 1450 50  0001 C CNN
 $EndComp
 NoConn ~ 4950 2000
 NoConn ~ 4950 2200
-NoConn ~ 4950 2300
-NoConn ~ 4950 2400
 NoConn ~ 4950 2600
 NoConn ~ 4950 2700
 NoConn ~ 4950 2800
@@ -1325,7 +1312,7 @@ F 3 "" H 1250 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L bcl4v3-rescue:OSHW-LOGOM-SparkFun-Aesthetics LOGO1
+L bcl4v3-rescue:OSHW-LOGOM-SparkFun-Aesthetics-bcl4v3-rescue-bcl4v3-rescue LOGO1
 U 1 1 5BFECBD9
 P 3750 4450
 F 0 "LOGO1" H 3750 4700 45  0001 C CNN
@@ -1542,4 +1529,19 @@ Wire Wire Line
 	5450 1150 4950 1150
 Text Label 5050 1150 0    50   ~ 0
 VBAT
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 5C7319EC
+P 2550 2300
+F 0 "J4" H 2630 2250 50  0000 L CNN
+F 1 "Conn_01x05" H 2630 2341 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 2550 2300 50  0001 C CNN
+F 3 "~" H 2550 2300 50  0001 C CNN
+	1    2550 2300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1750 2100 2350 2100
+Text Label 1750 2100 0    50   ~ 0
+USB_VBUS
 $EndSCHEMATC
