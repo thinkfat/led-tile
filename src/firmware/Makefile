@@ -26,10 +26,10 @@ HW_VERSION = "HW_38x38_rev_0_3"
 
 DEFS += -D$(HW_VERSION)
 #DEFS += -DCONSOLE_PRINTF
-OBJS= disp.o disp_spi.o ticker.o rand.o usart_buffered.o spi_dma.o applet.o
+OBJS= disp.o disp_spi.o ticker.o rand.o spi_dma.o applet.o
 OBJS += cdcacm.o console.o
 OBJS += wordclock.o rtc.o
-#OBJS += life.o
+#OBJS += usart_buffered.o life.o
 
 LDSCRIPT = ../stm32f070.ld
 
