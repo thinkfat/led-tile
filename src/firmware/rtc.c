@@ -14,6 +14,8 @@ enum worker_state {
 	WAIT_DIGIT1,
 	WAIT_DIGIT2,
 	WAIT_DIGIT3,
+	WAIT_DIGIT4,
+	WAIT_DIGIT5,
 	SET_TIME,
 };
 
@@ -34,9 +36,8 @@ static void rtc_set_time(unsigned int time)
 		;
 
 	/* update the time */
-	rtc_time = RTC_TR;
-	rtc_time &= 0xFFFF0000;
-	rtc_time |= time;
+	rtc_time = RTC_TR & 0xFF000000;
+	rtc_time |= time & 0x00FFFFFF;
 	RTC_TR = rtc_time;
 
 	/* exit init mode */
@@ -56,8 +57,6 @@ static void rtc_init(void)
 	rcc_set_rtc_clock_source(RCC_LSE);
 	rcc_enable_rtc_clock();
 	pwr_enable_backup_domain_write_protect ();
-
-
 }
 
 static void rtc_worker(void)
@@ -81,6 +80,7 @@ static void rtc_worker(void)
 	case WAIT_DIGIT1:
 	case WAIT_DIGIT2:
 	case WAIT_DIGIT3:
+	case WAIT_DIGIT4:
 		if (c >= '0' && c <= '9') {
 			bcd_time |= c - '0';
 			bcd_time <<= 4;
@@ -88,9 +88,16 @@ static void rtc_worker(void)
 		} else
 			worker_state = WORKER_IDLE;
 		break;
+	case WAIT_DIGIT5:
+		if (c >= '0' && c <= '9') {
+			bcd_time |= c - '0';
+			++worker_state;
+		} else
+			worker_state = WORKER_IDLE;
+		break;
 
 	case SET_TIME:
-		rtc_set_time(bcd_time << 4);
+		rtc_set_time(bcd_time);
 		worker_state = WORKER_IDLE;
 		console_puts("\nSET\n");
 		break;
