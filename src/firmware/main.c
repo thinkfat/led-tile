@@ -27,7 +27,6 @@
 #define PIN_LED GPIO0
 
 /* Private variables ---------------------------------------------------------*/
-void led_init(void);
 
 uint8_t bright[]={1,2,3,5,7,10,14, 20, 31};
 
@@ -99,7 +98,7 @@ static const uint8_t digits[6][5][5] = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
-void led_init(void)
+static void led_init(void)
 {
 	/* Enable GPIOC clock. */
 	rcc_periph_clock_enable(RCC_GPIOF);
