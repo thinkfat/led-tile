@@ -30,6 +30,9 @@ static void disp_out_init(void)
 {
 	/* enable clocks for the GPIOs connected to the display */
 	rcc_periph_clock_enable(DISP_GPIOS_RCC);
+#ifdef DISP_GPIOS_RCC_2
+	rcc_periph_clock_enable(DISP_GPIOS_RCC_2);
+#endif
 
 	/*
 	 * setup the GPIOs for the Output-Enable pins of the
