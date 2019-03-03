@@ -16,7 +16,6 @@
 #include "ticker.h"
 #include "dots.h"
 #include "rand.h"
-#include "usart_buffered.h"
 #include "cdcacm.h"
 
 /* Private typedef -----------------------------------------------------------*/
@@ -167,7 +166,6 @@ int main(void)
 	int i=0;
 	/* we want 48 MHz sysclk */
 	rcc_clock_setup_in_hsi_out_48mhz();
-	usart_init();
 	led_init();
 	ticker_init();
 	disp_init();

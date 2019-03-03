@@ -25,12 +25,13 @@
 
 #include "hw_defs.h"
 #include "usart_buffered.h"
+#include "applet.h"
 
 
 
 /* ---------------- Macro Definition --------------- */
 
-#define BUF_SIZE 8
+#define BUF_SIZE 16
 
 struct usart_buffer {
 	uint8_t buf[BUF_SIZE];
@@ -253,3 +254,9 @@ void usart_init(void)
 			USART_D_TX_PIN,
 			USART_D_TX_AF_NUM);
 }
+
+static const struct applet usart_applet = {
+	.init = usart_init,
+};
+
+applet_add(usart);
