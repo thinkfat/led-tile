@@ -5,7 +5,7 @@
 
 prg: $(BINARY).elf
 	@echo programming...
-	$(OOCD) -f ../openocd_stm32_orange.cfg -c"program $(BINARY).elf verify reset exit"
+	$(OOCD) -f ../openocd.cfg -c"program $(BINARY).elf verify reset exit"
 
 # FIXME what is the meaning of the number behind colon?
 prg_usb: $(BINARY).bin
