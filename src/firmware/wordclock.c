@@ -97,6 +97,7 @@ static void clock_init(void)
 static void clock_worker(void)
 {
 	unsigned int tick = ticker_get_ticks();
+	int brightness;
 	uint8_t mask[8];
 	int rtc_time;
 	int hrs;
@@ -117,6 +118,11 @@ static void clock_worker(void)
 
 	hrs = bcd_to_int((rtc_time >> RTC_TR_HU_SHIFT) & 0xFF);
 	mins = bcd_to_int((rtc_time >> RTC_TR_MNU_SHIFT) & 0xFF);
+
+	if (hrs >=23 || hrs < 7)
+		brightness = 8;
+	else
+		brightness = 31;
 
 	if (mins >= 5 && mins < 10) {
 		update_mask(mask, MFIVE);
@@ -164,10 +170,10 @@ static void clock_worker(void)
 
 	update_mask(mask, hrs % 12);
 
-	draw(mask, 31);
+	draw(mask, brightness);
 #endif
 
-	clock_tick_next = tick + 1000;
+	clock_tick_next = tick + 30000;
 }
 
 static const struct applet wordclock_applet = {
