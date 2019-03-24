@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L project:TP5400 U1
+L battery-manager-rescue:TP5400-project U1
 U 1 1 5C6D3A5C
 P 5600 3050
 F 0 "U1" H 5600 3365 50  0000 C CNN
@@ -566,7 +566,7 @@ Connection ~ 6800 3000
 Text Label 4600 3000 0    50   ~ 0
 VCC
 $Comp
-L SparkFun-Connectors:JST_2MM_MALE J9
+L battery-manager-rescue:JST_2MM_MALE-SparkFun-Connectors J9
 U 1 1 5C719919
 P 8900 3850
 F 0 "J9" V 8953 4078 45  0000 L CNN
@@ -597,7 +597,7 @@ Wire Wire Line
 Text Label 8550 3800 0    50   ~ 0
 BAT
 $Comp
-L SparkFun-Connectors:JST_2MM_MALE J10
+L battery-manager-rescue:JST_2MM_MALE-SparkFun-Connectors J10
 U 1 1 5C7237C7
 P 8900 4550
 F 0 "J10" V 8953 4778 45  0000 L CNN
@@ -690,10 +690,10 @@ F 3 "~" H 4450 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0103
 U 1 1 5C78BB92
 P 1600 5900
-F 0 "#FLG?" H 1600 5975 50  0001 C CNN
+F 0 "#FLG0103" H 1600 5975 50  0001 C CNN
 F 1 "PWR_FLAG" H 1600 6074 50  0000 C CNN
 F 2 "" H 1600 5900 50  0001 C CNN
 F 3 "~" H 1600 5900 50  0001 C CNN
@@ -703,4 +703,52 @@ $EndComp
 Wire Wire Line
 	1600 5900 1850 5900
 Connection ~ 1850 5900
+$Comp
+L Device:D_Schottky_Small D4
+U 1 1 5C7FE7C4
+P 4200 1600
+F 0 "D4" H 4200 1700 50  0000 C CNN
+F 1 "SS32" H 4000 1700 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" V 4200 1600 50  0001 C CNN
+F 3 "~" V 4200 1600 50  0001 C CNN
+	1    4200 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3700 1600 4000 1600
+Wire Wire Line
+	4550 1600 4300 1600
+Text Label 3700 1600 0    50   ~ 0
+USB_VBUS
+Text Label 4350 1600 0    50   ~ 0
+VOUT
+$Comp
+L Device:R_Small R4
+U 1 1 5C8050B2
+P 4000 1900
+F 0 "R4" H 4059 1946 50  0000 L CNN
+F 1 "5k" H 4059 1855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4000 1900 50  0001 C CNN
+F 3 "~" H 4000 1900 50  0001 C CNN
+	1    4000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5C808A38
+P 4000 2100
+F 0 "#PWR0115" H 4000 1850 50  0001 C CNN
+F 1 "GND" H 4005 1927 50  0000 C CNN
+F 2 "" H 4000 2100 50  0001 C CNN
+F 3 "" H 4000 2100 50  0001 C CNN
+	1    4000 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1600 4000 1800
+Connection ~ 4000 1600
+Wire Wire Line
+	4000 1600 4100 1600
+Wire Wire Line
+	4000 2000 4000 2100
 $EndSCHEMATC

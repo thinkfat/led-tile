@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name project)(type Legacy)(uri /home/maw/projects/dotmatrix/battery-manager/project.lib)(options "")(descr ""))
+  (lib (name battery-manager-rescue)(type Legacy)(uri ${KIPRJMOD}/battery-manager-rescue.lib)(options "")(descr ""))
 )
