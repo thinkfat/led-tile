@@ -1,6 +1,6 @@
 %.bin:%.elf
 	@echo 'Creating a binary ($@) from the .elf ($@) file. . . .'
-	arm-none-eabi-objcopy -O binary "$<" "$@"
+	$(PREFIX)-objcopy -O binary "$<" "$@"
 	@echo ' '
 
 prg: $(BINARY).elf
