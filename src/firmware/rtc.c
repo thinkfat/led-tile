@@ -35,6 +35,9 @@ static void rtc_set_time(unsigned int time)
 	while ((RTC_ISR & RTC_ISR_INITF) == 0)
 		;
 
+	/* set format to 24h mode */
+	RTC_CR &= ~RTC_CR_FMT;
+
 	/* update the time */
 	rtc_time = RTC_TR & 0xFF000000;
 	rtc_time |= time & 0x00FFFFFF;
