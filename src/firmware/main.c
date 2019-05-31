@@ -110,12 +110,12 @@ static void led_init(void)
 
 static void led_on(void)
 {
-	gpio_set(PORT_LED, PIN_LED);	/* LED on */
+	gpio_clear(PORT_LED, PIN_LED);	/* LED on */
 }
 
 static void led_off(void)
 {
-	gpio_clear(PORT_LED, PIN_LED);	/* LED on */
+	gpio_set(PORT_LED, PIN_LED);	/* LED on */
 }
 
 static void print_smile(uint8_t num)
@@ -166,6 +166,7 @@ int main(void)
 	/* we want 48 MHz sysclk */
 	rcc_clock_setup_in_hsi_out_48mhz();
 	led_init();
+	led_on();
 	ticker_init();
 	disp_init();
 	rand_init();
@@ -193,14 +194,14 @@ int main(void)
 	for ( i = 0; i < 4; i++) {
 		print_grey(i);
 		led_on();
-		ticker_msleep(200);
+		ticker_msleep(400);
 		led_off();
-		ticker_msleep(200);
+		ticker_msleep(400);
 	}
 
 	disp_clean();
 
-	led_on();
+	led_off();
 	
 	while (1) {
 		applet_run_all();

@@ -20,11 +20,12 @@
 TOPDIR = $(shell pwd)
 
 BINARY = main
-HW_VERSION = "HW_38x38_rev_0_3"
+HW_VERSION = "HW_38x38_rev_0_4"
 
 DEFS += -D$(HW_VERSION)
 #DEFS += -DCONSOLE_PRINTF
-OBJS= disp.o disp_spi.o ticker.o rand.o spi_dma.o applet.o
+OBJS= disp.o ticker.o rand.o applet.o
+OBJS += disp_is31fl3736.o
 OBJS += cdcacm.o console.o
 OBJS += wordclock.o rtc.o
 #OBJS += usart_buffered.o life.o

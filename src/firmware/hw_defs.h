@@ -10,6 +10,10 @@
 
 #include "hw_defs_38x38_rev_0_3.h"
 
+#elif defined (HW_38x38_rev_0_4)
+
+#include "hw_defs_38x38_rev_0_4.h"
+
 #elif defined (HW_60x60_rev_0_2)
 
 #include "hw_defs_60x60_rev_0_2.h"
