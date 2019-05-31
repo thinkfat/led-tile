@@ -1,4 +1,4 @@
-update=Do 28 Mär 2019 09:10:19 CET
+update=Do 11 Apr 2019 23:01:38 CEST
 version=1
 last_client=kicad
 [general]
@@ -16,7 +16,7 @@ LibDir=
 version=1
 PageLayoutDescrFile=
 LastNetListRead=
-CopperLayerCount=2
+CopperLayerCount=4
 BoardThickness=1.6
 AllowMicroVias=0
 AllowBlindVias=0
@@ -30,8 +30,9 @@ MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.1524
 TrackWidth2=0.1524
-TrackWidth3=0.254
-TrackWidth4=0.508
+TrackWidth3=0.2032
+TrackWidth4=0.254
+TrackWidth5=0.508
 ViaDiameter1=0.5
 ViaDrill1=0.3
 dPairWidth1=0.2
@@ -61,6 +62,12 @@ SolderMaskClearance=0.0508
 SolderMaskMinWidth=0.0508
 SolderPasteClearance=0
 SolderPasteRatio=-0
+[pcbnew/Layer.In1.Cu]
+Name=In1.Cu
+Type=1
+[pcbnew/Layer.In2.Cu]
+Name=In2.Cu
+Type=1
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/1]
 Name=VCC

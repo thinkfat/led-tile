@@ -1,3 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP IS31FL3731-SALS2
+D IC LED DVR 144DOT AUD MOD 28SSOP
+K 706-1412-5-ND
+F http://www.issi.com/WW/pdf/31FL3731.pdf
+$ENDCMP
+#
 #End Doc Library
